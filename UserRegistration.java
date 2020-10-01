@@ -10,7 +10,7 @@ public static void main(String[] args) {
        System.out.println("Enter UserName");
        String name=sc.next();
        System.out.println(name);
-       String pattern="^[1-9A-Za-z/@/#]{8}$";
+       String pattern="^(?=.*[A-Z])[1-9A-Za-z/@/#]{8,}$";
        Pattern namePattern=Pattern.compile(pattern);
        Matcher m=namePattern.matcher(name);
        System.out.println("Match -"+m.matches());
